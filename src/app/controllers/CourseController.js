@@ -74,12 +74,6 @@ class CourseController {
     // [POST] /course/handle-form-action
     handleFromActions(req, res, next) {
         switch (req.body.action) {
-            // case 'delete':
-            //    // res.json(req.body);
-            //     Course.delete({ _id: { $in: req.body.courseIds  }})
-            //         .then(() => res.redirect('back'))
-            //         .catch(next);
-            //     break;
             case 'delete':
                 Course.delete({ _id: { $in: req.body.courseIds } })
                     .then(() => res.redirect('back'))
